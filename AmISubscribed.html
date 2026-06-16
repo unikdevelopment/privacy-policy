@@ -35,33 +35,48 @@
   </p>
 
   <h2>Data collected and stored</h2>
-  <p>The extension reads and locally caches one type of data:</p>
+  <p>The extension reads and locally caches two types of data, both stored exclusively on your device:</p>
   <ul>
     <li>
-      <strong>Channel display names</strong> — the names of channels shown on your
-      YouTube Subscriptions page (<code>youtube.com/feed/channels</code>). These names
-      are captured as you scroll through that page and stored in
-      <code>chrome.storage.local</code> on your own device.
+      <strong>Channel handles</strong> — the canonical identifiers (e.g. <code>/@channelname</code>)
+      of channels shown on your YouTube Subscriptions page
+      (<code>youtube.com/feed/channels</code>). These are captured as you scroll through
+      that page and stored in <code>chrome.storage.local</code>.
+    </li>
+    <li>
+      <strong>Channel ID → handle mappings</strong> — for certain channel types (music and
+      Official Artist Channels), YouTube's home feed only exposes an internal channel ID
+      (e.g. <code>/channel/UCxxxxx</code>) rather than the handle. The extension fetches
+      the corresponding YouTube channel page once per channel to resolve the handle, then
+      caches the result locally so the request is never repeated. See
+      <em>Network requests</em> below.
     </li>
   </ul>
   <p>
-    No account information, watch history, video data, or personally identifiable
+    No account credentials, watch history, video data, or personally identifiable
     information is ever read or stored.
   </p>
 
-  <h2>Where your data goes</h2>
+  <h2>Network requests</h2>
   <p>
-    <strong>Nowhere.</strong> All data is stored exclusively in your browser's local
-    storage (<code>chrome.storage.local</code>). The extension makes no network requests
-    of its own — it never contacts any external server, database, or third-party service.
+    The extension makes background requests to <code>https://www.youtube.com/channel/{id}</code>
+    to resolve the canonical handle for channels whose home-feed cards do not include a
+    handle link. These requests are made at most once per channel (subsequent visits use
+    the local cache), are sent to YouTube's own servers only, and carry no data other than
+    the channel ID in the URL. No information is transmitted to any third party, and no
+    data leaves your device.
+  </p>
+  <p>
+    The extension does <strong>not</strong> use the YouTube Data API, does not authenticate
+    with Google on your behalf, and does not make any requests beyond those described above.
   </p>
 
   <h2>How to delete your data</h2>
   <p>
     Click the extension icon in your toolbar and press <strong>Clear data</strong>.
-    This immediately removes all cached channel names from your browser. You can also
-    clear it via Chrome's built-in storage controls at
-    <code>chrome://settings/siteData</code>.
+    This immediately removes all cached channel handles from your browser. The channel ID
+    mapping cache can be cleared via Chrome's built-in storage controls at
+    <code>chrome://settings/siteData</code>, or by removing and reinstalling the extension.
   </p>
 
   <h2>Analytics and telemetry</h2>
@@ -69,10 +84,10 @@
 
   <h2>Third-party services</h2>
   <p>
-    The extension interacts with <strong>YouTube</strong> (youtube.com) only in the
-    sense that it reads the rendered HTML of pages you visit. It does not use the
-    YouTube Data API, does not authenticate with Google, and does not send any data
-    to YouTube or Google beyond normal browser page requests you initiate yourself.
+    The extension interacts with <strong>YouTube / Google</strong> (youtube.com) in two ways:
+    it reads the rendered HTML of pages you visit, and it makes background fetch requests
+    to YouTube channel pages as described under <em>Network requests</em> above. No data
+    is shared with any other third-party service.
   </p>
   <p>
     The popup contains an optional link to
