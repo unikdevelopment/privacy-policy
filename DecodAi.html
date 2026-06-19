@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — DecodAI</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 20px;
+      color: #1a1a1a;
+      line-height: 1.7;
+      font-size: 15px;
+      background: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111; color: #ddd; }
+      a { color: #6ee7b7; }
+      h1, h2, h3 { color: #e2f0ec; }
+      code { background: #222; }
+    }
+    h1 { font-size: 22px; margin-bottom: 4px; }
+    .date { font-size: 13px; color: #888; margin-bottom: 24px; }
+    h2 { font-size: 16px; margin-top: 28px; margin-bottom: 8px; }
+    h3 { font-size: 14px; margin-top: 16px; margin-bottom: 4px; }
+    p, li { margin-bottom: 8px; }
+    ul { padding-left: 20px; }
+    code { background: #eee; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+    a { color: #059669; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — DecodAI</h1>
+  <p class="date">Effective date: June 19, 2026</p>
+  <p>DecodAI is a browser extension that lets you highlight text on any webpage and send it to an AI provider for explanations, summaries, and rewrites. This policy describes what data the extension handles and how.</p>
+
+  <h2>Data the Extension Collects</h2>
+
+  <h3>Data you provide</h3>
+  <ul>
+    <li><strong>API keys</strong> — You enter your own API keys for OpenAI, Anthropic, or Google Gemini. Keys are encrypted locally using AES-256-GCM with PBKDF2 key derivation (600,000 iterations) and stored in your browser's local storage. They are never sent to any server other than the AI provider you select.</li>
+    <li><strong>Vault password</strong> — Used to encrypt and decrypt your API keys. It is held only in browser session memory and is never transmitted anywhere.</li>
+  </ul>
+
+  <h3>Data processed during use</h3>
+  <ul>
+    <li><strong>Selected text</strong> — When you highlight text and invoke a template, the highlighted text is sent to the AI provider you have selected (OpenAI, Anthropic, or Google Gemini) to generate a response. The text is not sent anywhere else.</li>
+    <li><strong>Conversation history</strong> — Follow-up messages you type in the overlay are sent to the same AI provider as part of the ongoing conversation context.</li>
+  </ul>
+
+  <h3>Data stored locally</h3>
+  <ul>
+    <li><strong>Response history</strong> — The last 10 AI responses are saved in your browser's local storage. You can clear this at any time from the popup.</li>
+    <li><strong>Token usage</strong> — Cumulative counts of input and output tokens per provider are stored locally. You can reset these at any time.</li>
+    <li><strong>Settings</strong> — Your selected provider, model, tone preference, and custom prompt templates are stored locally.</li>
+  </ul>
+
+  <h2>Data the Extension Does NOT Collect</h2>
+  <ul>
+    <li>Browsing history or visited URLs</li>
+    <li>Cookies or session data from websites</li>
+    <li>Personal information (name, email, location)</li>
+    <li>Analytics, telemetry, or usage tracking of any kind</li>
+    <li>Crash reports</li>
+  </ul>
+
+  <h2>Third-Party Services</h2>
+  <p>The extension communicates only with the AI provider you select:</p>
+  <ul>
+    <li><strong>OpenAI</strong> — <code>https://api.openai.com</code> — <a href="https://openai.com/privacy" target="_blank">Privacy Policy</a></li>
+    <li><strong>Anthropic</strong> — <code>https://api.anthropic.com</code> — <a href="https://www.anthropic.com/privacy" target="_blank">Privacy Policy</a></li>
+    <li><strong>Google</strong> — <code>https://generativelanguage.googleapis.com</code> — <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+  </ul>
+  <p>Your selected text and conversation messages are sent to the chosen provider's API under their respective privacy policies and terms of service. DecodAI does not operate any servers and does not receive, store, or process your data remotely.</p>
+
+  <h2>Data Retention</h2>
+  <p>All data is stored locally in your browser. You can delete it at any time by:</p>
+  <ul>
+    <li>Clearing history and usage from the popup</li>
+    <li>Resetting the vault (removes all stored API keys)</li>
+    <li>Uninstalling the extension (removes all local data)</li>
+  </ul>
+
+  <h2>Children's Privacy</h2>
+  <p>DecodAI is not directed at children under 13 and does not knowingly collect data from children.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>If this policy is updated, the new version will be published with an updated effective date.</p>
+
+  <h2>Contact</h2>
+  <p>If you have questions about this privacy policy, please open an issue on the project's GitHub repository.</p>
+</body>
+</html>
