@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — ScrollDive</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --accent: #6366f1;
+      --border: #e5e7eb;
+      --card-bg: #f9fafb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #18181b;
+        --text: #f0f0f5;
+        --muted: #9ca3af;
+        --accent: #818cf8;
+        --border: #2e2e35;
+        --card-bg: #1f1f23;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .header-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .header-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .updated {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    ul {
+      margin-bottom: 16px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 8px;
+    }
+
+    ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    .no-list li::before {
+      background: #ef4444;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    th {
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    code {
+      font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+      font-size: 13px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--accent);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 40px 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-icon">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 4h12a2 2 0 010 4H10a2 2 0 00-2 2v10a2 2 0 01-4 0V8a4 4 0 014-4z" fill="white" opacity="0.7"/>
+          <path d="M56 4H44a2 2 0 000 4h10a2 2 0 012 2v10a2 2 0 004 0V8a4 4 0 00-4-4z" fill="white" opacity="0.7"/>
+          <path d="M8 60h12a2 2 0 000-4H10a2 2 0 01-2-2V44a2 2 0 00-4 0v12a4 4 0 004 4z" fill="white" opacity="0.7"/>
+          <path d="M56 60H44a2 2 0 010-4h10a2 2 0 002-2V44a2 2 0 014 0v12a4 4 0 01-4 4z" fill="white" opacity="0.7"/>
+          <path d="M32 18l-10 12h7v16h6V30h7L32 18z" fill="white"/>
+        </svg>
+      </div>
+      <h1>Privacy Policy</h1>
+    </div>
+    <p class="updated">Last updated: June 22, 2026</p>
+
+    <h2>Overview</h2>
+    <p>ScrollDive is a browser extension that toggles fullscreen mode based on scroll direction. Your privacy is important to us — the extension works entirely on your device with no data collection whatsoever.</p>
+
+    <h2>Data storage</h2>
+    <p>The extension stores the following settings locally on your device using Chrome's built-in <code>chrome.storage.local</code> API:</p>
+    <ul>
+      <li><strong>Enabled/disabled state</strong> — whether the extension is active</li>
+      <li><strong>Sensitivity preference</strong> — your chosen scroll sensitivity level (1–5)</li>
+      <li><strong>Per-site mode flag</strong> — whether per-site filtering is turned on</li>
+      <li><strong>Site allow list</strong> — hostnames you have explicitly added</li>
+      <li><strong>Site exclude list</strong> — hostnames you have explicitly excluded</li>
+      <li><strong>Preview mode flag</strong> — whether preview mode is enabled</li>
+    </ul>
+    <div class="card">
+      <p style="margin:0;">All data is stored locally in your browser and <strong>never leaves your device</strong>.</p>
+    </div>
+
+    <h2>Data collection</h2>
+    <p>This extension does <strong>not</strong>:</p>
+    <ul class="no-list">
+      <li>Collect, transmit, or share any personal information</li>
+      <li>Track your browsing history or behavior</li>
+      <li>Send any data to external servers or third parties</li>
+      <li>Use analytics, telemetry, or advertising services</li>
+      <li>Access cookies, passwords, or form data</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <div class="card" style="padding: 0; overflow: hidden;">
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Why it's needed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>storage</code></td>
+            <td>Save your preferences locally</td>
+          </tr>
+          <tr>
+            <td><code>activeTab</code></td>
+            <td>Read the current tab's URL to power per-site and exclude-list features</td>
+          </tr>
+          <tr>
+            <td>Content script on all URLs</td>
+            <td>Detect scroll direction on every page so fullscreen can be triggered automatically</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Third-party services</h2>
+    <p>None. The extension has zero external dependencies and makes no network requests.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy is updated, the changes will be posted here with an updated date at the top.</p>
+
+    <div class="divider"></div>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this privacy policy or your data, contact us at:<br>
+      <a href="mailto:unikdevelopment@gmail.com">unikdevelopment@gmail.com</a>
+    </p>
+
+    <footer>ScrollDive — Auto Fullscreen on Scroll</footer>
+  </div>
+</body>
+</html>
