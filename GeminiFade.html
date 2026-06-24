@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeminiFade — Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #431407;
+      background: #fff7ed;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container { max-width: 640px; margin: 0 auto; }
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #f97316; }
+    .updated { font-size: 13px; color: #9a3412; margin-bottom: 32px; }
+    h2 { font-size: 18px; font-weight: 600; margin: 28px 0 12px; color: #431407; }
+    p, li { font-size: 15px; margin-bottom: 12px; }
+    ul { padding-left: 24px; margin-bottom: 16px; }
+    a { color: #ea580c; }
+    code { background: #ffedd5; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+    .highlight {
+      background: #ffedd5;
+      border-left: 3px solid #f97316;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1210; color: #fed7aa; }
+      h1 { color: #fb923c; }
+      h2 { color: #fed7aa; }
+      .updated { color: #fb923c; }
+      .highlight { background: #2c1f18; border-left-color: #fb923c; }
+      a { color: #fb923c; }
+      code { background: #2c1f18; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GeminiFade Privacy Policy</h1>
+    <p class="updated">Last updated: June 24, 2026</p>
+
+    <div class="highlight">
+      <strong>In short:</strong> GeminiFade does not collect, transmit, or share any personal data. All preferences are stored locally on your device.
+    </div>
+
+    <h2>What data does GeminiFade access?</h2>
+    <p>GeminiFade reads the DOM (Document Object Model) of Google Workspace web pages solely to identify and hide Gemini AI integration elements such as buttons, panels, icons, and promotional banners. This processing happens entirely within your browser.</p>
+
+    <h2>What data does GeminiFade store?</h2>
+    <p>GeminiFade stores only your extension preferences using <code>chrome.storage.local</code>:</p>
+    <ul>
+      <li>Whether the extension is enabled or disabled</li>
+      <li>Which optional features are toggled on or off (tree view, syntax highlighting, copy, search)</li>
+    </ul>
+    <p>This data never leaves your device. It is not synced, uploaded, or shared with any server or third party.</p>
+
+    <h2>What data does GeminiFade collect?</h2>
+    <p>None. GeminiFade does not collect any personal information, browsing history, analytics, telemetry, or usage statistics.</p>
+
+    <h2>Does GeminiFade communicate with external servers?</h2>
+    <p>No. GeminiFade operates entirely offline within your browser. It makes no network requests and has no server-side component.</p>
+
+    <h2>Third-party services</h2>
+    <p>GeminiFade does not integrate with, send data to, or receive data from any third-party services, APIs, or analytics platforms.</p>
+
+    <h2>Permissions explained</h2>
+    <ul>
+      <li><strong>storage</strong> — Saves your toggle preferences locally on your device</li>
+      <li><strong>activeTab</strong> — Allows the popup to communicate with the content script on the current tab to toggle hiding and retrieve the hidden element count</li>
+      <li><strong>Host permissions</strong> (docs.google.com, sheets.google.com, mail.google.com, drive.google.com, slides.google.com) — Required to inject the content script that detects and hides Gemini UI elements on Google Workspace pages</li>
+    </ul>
+
+    <h2>Changes to this policy</h2>
+    <p>If this privacy policy is updated, the changes will be reflected on this page with an updated date. Since GeminiFade does not collect any data, meaningful changes to this policy are unlikely.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this privacy policy or your data, contact us at:</p>
+    <p><a href="mailto:unikdevelopment@gmail.com">unikdevelopment@gmail.com</a></p>
+  </div>
+</body>
+</html>
