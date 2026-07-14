@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ShortsTrack — Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1c1417;
+    --muted: #6f6266;
+    --border: #ece2e4;
+    --accent: #c81d3f;
+    --accent-dark: #7a1128;
+    --card-bg: #faf6f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171215;
+      --fg: #f3ecee;
+      --muted: #ab9ba0;
+      --border: #362b30;
+      --accent: #ef4d6c;
+      --accent-dark: #b32447;
+      --card-bg: #221b1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 28px 24px;
+    background: linear-gradient(135deg, #c81d3f, #7a1128);
+    color: #fff;
+  }
+  header svg { width: 36px; height: 36px; flex: 0 0 auto; }
+  header h1 { font-size: 20px; margin: 0; }
+  header p { margin: 2px 0 0; font-size: 13px; color: rgba(255,255,255,0.8); }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 32px 0 10px;
+    color: var(--accent);
+  }
+  h2:first-of-type { margin-top: 0; }
+  p, li { font-size: 14.5px; color: var(--fg); }
+  ul { padding-left: 20px; }
+  .updated { font-size: 13px; color: var(--muted); margin-top: -4px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+  }
+  th { background: var(--card-bg); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  a { color: var(--accent); }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 24px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="16" cy="16" r="13" stroke="rgba(255,255,255,0.35)" stroke-width="3"/>
+      <circle cx="16" cy="16" r="13" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="81.68" stroke-dashoffset="20" transform="rotate(-90 16 16)"/>
+      <path d="M10.5 16.5l3.5 3.5 7-7" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div>
+      <h1>ShortsTrack — Privacy Policy</h1>
+      <p>Watched Shorts Indicator for YouTube</p>
+    </div>
+  </header>
+
+  <main>
+    <p class="updated">Last updated: July 11, 2026</p>
+
+    <div class="card">
+      <strong>The short version:</strong> ShortsTrack does not collect, transmit, or sell any
+      of your data. Your watched-Shorts history is stored only in your own browser. The only
+      network request the extension ever makes is a license-key check, and only if you
+      activate a paid Pro key.
+    </div>
+
+    <h2>What data is accessed</h2>
+    <p>ShortsTrack's content script runs only on <code>www.youtube.com</code> pages. It reads:</p>
+    <ul>
+      <li>The video ID (an 11-character code) from Shorts URLs on the page, to know which
+        Short a thumbnail or player refers to.</li>
+      <li>Playback position of the Short you're actively watching, to calculate how much of
+        it you've seen.</li>
+    </ul>
+    <p>It does <strong>not</strong> read video titles, thumbnails, channel names, comments,
+      your Google account, or any other page content.</p>
+
+    <h2>What data is stored</h2>
+    <p>All of the following is stored locally in your browser via <code>chrome.storage.local</code>
+      and is never transmitted anywhere:</p>
+    <ul>
+      <li>A map of watched video IDs → watch progress (0–100%), a completed flag, and a
+        last-updated timestamp.</li>
+      <li>Your extension settings (Free/Pro state, whether "hide watched" is enabled).</li>
+      <li>Free-tier history is automatically deleted after 7 days; Pro removes this limit.</li>
+    </ul>
+
+    <h2>What data is collected</h2>
+    <p>None. ShortsTrack has no analytics, no telemetry, no crash reporting, and no
+      third-party tracking scripts of any kind.</p>
+
+    <h2>External servers &amp; third-party services</h2>
+    <table>
+      <tr><th>Service</th><th>When contacted</th><th>What's sent</th></tr>
+      <tr>
+        <td>api.lemonsqueezy.com</td>
+        <td>Only when you enter and activate a Pro license key on the Options page, and
+          during an automatic re-check roughly every 6 hours <em>if</em> a key is active</td>
+        <td>The license key you entered, and an installation identifier (not tied to your
+          identity). No browsing history, video IDs, or watch data are ever included. This
+          request goes directly to Lemon Squeezy, our payment provider — never through
+          unikdev.app's own servers.</td>
+      </tr>
+    </table>
+    <p>Free-tier use of ShortsTrack makes <strong>zero</strong> network requests.</p>
+
+    <h2>Permissions explained</h2>
+    <table>
+      <tr><th>Permission</th><th>Why it's needed</th></tr>
+      <tr><td><code>storage</code>, <code>unlimitedStorage</code></td><td>Save your watched-Shorts history and settings locally.</td></tr>
+      <tr><td><code>contextMenus</code></td><td>Adds the Pro right-click "mark watched/unwatched" menu items.</td></tr>
+      <tr><td><code>alarms</code></td><td>Runs the periodic free-tier history cleanup and Pro license re-check.</td></tr>
+      <tr><td><code>www.youtube.com</code></td><td>Required to run the content script that draws the progress bar/badge.</td></tr>
+      <tr><td><code>api.lemonsqueezy.com</code></td><td>Required for the license-validation request described above.</td></tr>
+    </table>
+
+    <h2>Data deletion</h2>
+    <p>Use "Clear all watched history" in the popup at any time, or remove the extension —
+      Chrome deletes all of its local storage automatically when an extension is uninstalled.</p>
+
+    <h2>Children's privacy</h2>
+    <p>ShortsTrack is not directed at children and does not knowingly collect any data from
+      anyone, of any age — see "What data is collected" above.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the "Last updated" date above will change accordingly. Material
+      changes will also be noted in the extension's Chrome Web Store changelog.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or ShortsTrack's data practices:
+      <a href="mailto:unikdevelopment@gmail.com">unikdevelopment@gmail.com</a></p>
+
+
+    <h2>Trademark disclaimer</h2>
+    <p>ShortsTrack is an independent, unofficial extension and is not affiliated with,
+      endorsed by, or sponsored by YouTube or Google LLC. "YouTube" and "Shorts" are
+      trademarks of Google LLC, used here only to describe compatibility.</p>
+  </main>
+
+  <footer>ShortsTrack — Watched Shorts Indicator</footer>
+</body>
+</html>
