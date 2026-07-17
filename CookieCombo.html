@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cookie Combo — Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #16211f;
+    --muted: #62716e;
+    --border: #e2e9e7;
+    --accent: #0d6e63;
+    --accent-dark: #084a42;
+    --card-bg: #f4f8f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141b1a;
+      --fg: #eef3f1;
+      --muted: #9db0ac;
+      --border: #2a3532;
+      --accent: #35b3a2;
+      --accent-dark: #1f8073;
+      --card-bg: #1b2422;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto;
+    max-width: 720px;
+    padding: 0 20px 60px;
+    font-family: "Roboto", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.55;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 28px 0 20px;
+  }
+  header svg { width: 40px; height: 40px; flex: 0 0 auto; }
+  header h1 { font-size: 20px; margin: 0; }
+  header span { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+  h2 {
+    font-size: 16px;
+    margin: 34px 0 8px;
+    color: var(--accent-dark);
+  }
+  @media (prefers-color-scheme: dark) {
+    h2 { color: var(--accent); }
+  }
+  p, li { font-size: 14.5px; color: var(--fg); }
+  .muted { color: var(--muted); font-size: 13px; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 16px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 12px 0;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { color: var(--muted); font-weight: 600; }
+  code {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 13px;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <mask id="cc-bite-mask">
+        <rect x="0" y="0" width="32" height="32" fill="#fff"/>
+        <circle cx="23" cy="8" r="7" fill="#000"/>
+      </mask>
+      <circle cx="16" cy="16" r="12" fill="#c48a4a" mask="url(#cc-bite-mask)"/>
+      <circle cx="11" cy="14" r="1.4" fill="#5e3a1e"/>
+      <circle cx="17" cy="20" r="1.4" fill="#5e3a1e"/>
+      <circle cx="10" cy="20" r="1.2" fill="#5e3a1e"/>
+    </svg>
+    <div>
+      <h1>Cookie Combo — Privacy Policy</h1>
+      <span>Last updated: July 16, 2026</span>
+    </div>
+  </header>
+
+  <p>
+    Cookie Combo is a browser extension that auto-clears cookies for sites you choose and
+    (Pro) auto-rejects cookie consent banners. This page describes, plainly and specifically,
+    what the extension does and doesn't do with your data — not a generic template.
+  </p>
+
+  <div class="card">
+    <strong>The short version:</strong> Cookie Combo makes no network requests on its own.
+    Everything it manages — your site rules, settings, and clearing log — stays in your own
+    browser. The only times any network request happens are (1) you paste a Pro license key,
+    or (2) you explicitly use "Report this site."
+  </div>
+
+  <h2>What Cookie Combo stores, and where</h2>
+  <p>All of the following is saved locally in your browser via <code>chrome.storage.local</code> —
+  never on a server we operate:</p>
+  <ul>
+    <li>Your site rules — the domains you've added as "auto-clear" or "never clear," and which mode each uses</li>
+    <li>Your settings — whether banner auto-reject is on, idle-clearing minutes, deep-clean/sync toggles, etc.</li>
+    <li>Pro's clearing log — a rotating record (capped at 200 entries) of which domain was cleared, when, and how many cookies</li>
+    <li>Your Pro license state — the key you entered, whether it's currently valid, and when it was last checked</li>
+    <li>A randomly generated installation id, used only to identify your browser to Lemon Squeezy's activation system (see below) — it is not a tracking identifier and is never sent anywhere else</li>
+  </ul>
+  <p>
+    If you're a Pro user and turn on <strong>sync across devices</strong>, your rules and settings
+    (not the clearing log) are additionally mirrored through <code>chrome.storage.sync</code> —
+    Chrome's own cross-device sync tied to your signed-in Google/Chrome profile. That data is
+    still yours, held in your Google account, and is never visible to us.
+  </p>
+
+  <h2>What Cookie Combo does with cookies</h2>
+  <p>
+    Cookie Combo reads and removes cookies (<code>chrome.cookies</code>) only for domains you've
+    explicitly added a rule for, or the current site when you click "Clear cookies now." Pro's
+    "Deep clean" additionally clears localStorage/IndexedDB/cache for those same domains
+    (<code>chrome.browsingData</code>). None of this cookie data is read, copied, or sent
+    anywhere — it is deleted, not collected.
+  </p>
+
+  <h2>What the banner auto-reject feature does (Pro)</h2>
+  <p>
+    When enabled, the extension's content script scans the current page for a known
+    cookie-consent platform's own "reject"/"decline" button (or a generic text match like
+    "Reject all") and clicks it — the same action you would take by hand. It does not read,
+    store, or transmit the page's content, and it does not click anything other than a
+    consent-banner control.
+  </p>
+
+  <h2>"Report this site"</h2>
+  <p>
+    If a consent banner isn't handled correctly, you can optionally click "Report this site" and
+    describe what happened. Only if you do this, Cookie Combo sends the current site's domain and
+    the message you typed to our report endpoint (<code>unikdev.app/api/extension-report</code>) so
+    we can improve banner coverage. Please don't include personal information in your report message
+    — it isn't needed to fix a banner-detection issue.
+  </p>
+
+  <h2>Pro license activation (Lemon Squeezy)</h2>
+  <p>
+    Cookie Combo Pro is sold and licensed through <a href="https://www.lemonsqueezy.com/" target="_blank" rel="noopener">Lemon Squeezy</a>,
+    a third-party payment and licensing provider — we do not operate our own purchase or license
+    server. When you paste a license key into the options page, the extension sends that key and
+    the random installation id above directly to Lemon Squeezy's public License Key API
+    (<code>api.lemonsqueezy.com</code>) to activate and periodically revalidate it. Checkout and
+    payment information (email, card details, etc.) is collected by Lemon Squeezy directly and is
+    governed by <a href="https://www.lemonsqueezy.com/privacy" target="_blank" rel="noopener">Lemon Squeezy's own privacy policy</a>,
+    not this one — we never see your payment details.
+  </p>
+
+  <h2>What Cookie Combo does not do</h2>
+  <ul>
+    <li>No analytics or tracking SDKs of any kind are bundled with the extension</li>
+    <li>No browsing history, page content, or form data is collected or transmitted</li>
+    <li>No data is sold, rented, or shared with advertisers or data brokers</li>
+    <li>No ads are shown or injected into any page</li>
+  </ul>
+
+  <h2>Permissions, explained</h2>
+  <table>
+    <tr><th>Permission</th><th>What it's for</th></tr>
+    <tr><td><code>storage</code></td><td>Saves your rules, settings, and clearing log locally (and via sync, if you enable it).</td></tr>
+    <tr><td><code>cookies</code></td><td>Reads/removes cookies only for domains you've ruled on, or the current site on a manual clear.</td></tr>
+    <tr><td><code>alarms</code></td><td>Periodically re-checks your Pro license and schedules idle-clearing checks.</td></tr>
+    <tr><td><code>idle</code></td><td>(Pro) Detects browser idle time for idle-based clearing.</td></tr>
+    <tr><td><code>browsingData</code></td><td>(Pro) "Deep clean" — clears localStorage/IndexedDB/cache for auto-cleared sites.</td></tr>
+    <tr><td>Host access to all sites</td><td>Lets the popup and banner detector work on whatever site you're currently on or add a rule for, including consent banners rendered in cross-origin iframes.</td></tr>
+    <tr><td><code>https://api.lemonsqueezy.com/*</code></td><td>Contacts Lemon Squeezy's License API directly to activate/validate a Pro key.</td></tr>
+  </table>
+
+  <h2>Children's privacy</h2>
+  <p>Cookie Combo is a general-purpose browser utility, not directed at children, and knowingly collects no personal information from anyone regardless of age.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the "Last updated" date above will change accordingly. Material changes will also be reflected in the extension's Chrome Web Store listing.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or your data? Email <a href="mailto:support@unikdev.app">support@unikdev.app</a>.</p>
+
+  <footer>
+    Cookie Combo is an independent extension and isn't affiliated with, endorsed by, or sponsored
+    by OneTrust, Cookiebot, Didomi, Google, Lemon Squeezy, or any other platform named above. Those
+    names are trademarks of their respective owners, referenced here only to describe compatibility
+    and the services this extension relies on.
+  </footer>
+</body>
+</html>
