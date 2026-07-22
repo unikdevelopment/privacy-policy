@@ -5,77 +5,172 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>YTFilter — Privacy Policy</title>
 <style>
-  body {
-    max-width: 680px;
-    margin: 60px auto;
-    font: 16px/1.7 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: #1a1a1a;
-    padding: 0 24px;
+:root {
+  color-scheme: light dark;
+  --bg: #fafafa;
+  --card: #ffffff;
+  --fg: #16171a;
+  --muted: #6b6f76;
+  --border: #e9e9ec;
+  --red: #ff0000;
+  --red-dark: #cc0000;
+  --red-soft: #fff1f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121214;
+    --card: #1a1b1e;
+    --fg: #f2f2f3;
+    --muted: #9a9ea6;
+    --border: #2a2b2f;
+    --red: #ff4d4d;
+    --red-dark: #ff6b6b;
+    --red-soft: #2a1414;
   }
-  h1 { font-size: 26px; margin-bottom: 4px; }
-  h2 { font-size: 17px; margin-top: 36px; margin-bottom: 8px; }
-  .meta { color: #666; font-size: 14px; margin-bottom: 40px; }
-  p { margin: 0 0 14px; }
-  ul { margin: 0 0 14px; padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  a { color: #cc0000; }
-  hr { border: none; border-top: 1px solid #e5e5e5; margin: 40px 0; }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.7 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+/* ── Brand header ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.mark {
+  width: 40px; height: 40px; flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--red);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px;
+}
+.mark span { display: block; height: 3px; background: #fff; border-radius: 2px; }
+.mark span:nth-child(1) { width: 22px; }
+.mark span:nth-child(2) { width: 16px; }
+.mark span:nth-child(3) { width: 10px; }
+.brand-name { font-size: 15px; font-weight: 700; letter-spacing: -0.2px; }
+.brand-name em { color: var(--red); font-style: normal; }
+.brand-nav { margin-left: auto; font-size: 12.5px; }
+.brand-nav a { color: var(--muted); text-decoration: none; }
+.brand-nav a:hover { color: var(--red); text-decoration: underline; }
+
+/* ── Card ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 36px 40px 40px;
+}
+@media (max-width: 520px) {
+  .card { padding: 28px 22px 32px; }
+}
+
+h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.3px; }
+.dev-line { font-size: 13.5px; color: var(--muted); margin: 0 0 6px; }
+.meta {
+  display: inline-block;
+  font-size: 12px; color: var(--muted);
+  background: var(--red-soft);
+  padding: 3px 10px; border-radius: 20px;
+  margin-bottom: 28px;
+}
+h2 { font-size: 15px; margin: 30px 0 8px; letter-spacing: -0.1px; }
+p { margin: 0 0 14px; color: var(--fg); }
+ul { margin: 0 0 14px; padding-left: 20px; }
+li { margin-bottom: 7px; }
+a { color: var(--red); }
+code {
+  font: 12.5px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: var(--red-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0 20px; }
+.footnote { font-size: 12.5px; color: var(--muted); }
+strong { font-weight: 700; }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<h1>YTFilter — Privacy Policy</h1>
-<p style="font-size:14px; color:#444;">Developer: <strong>Unik Development</strong> &mdash; <a href="mailto:unikdevelopment@gmail.com">unikdevelopment@gmail.com</a></p>
-<p class="meta">Last updated: May 2026</p>
+  <div class="brand">
+    <div class="mark" aria-hidden="true"><span></span><span></span><span></span></div>
+    <span class="brand-name">YT<em>Filter</em></span>
+    <nav class="brand-nav"><a href="https://unikdev.app/legal/terms" target="_blank" rel="noopener">Terms</a></nav>
+  </div>
 
-<p>YTFilter is a browser extension that filters YouTube video cards based on criteria you configure. This policy explains exactly what data the extension accesses and where it goes.</p>
+  <div class="card">
 
-<h2>Data we collect</h2>
-<p><strong>None.</strong> YTFilter does not collect, transmit, or sell any personal data. There is no backend server, no account system, and no analytics.</p>
+    <h1>Privacy Policy</h1>
+    <p class="dev-line">Developer: <strong>Unik Development</strong> &mdash; <a href="mailto:unikdevelopment@gmail.com">unikdevelopment@gmail.com</a></p>
+    <span class="meta">Last updated: May 2026</span>
 
-<h2>Data stored on your device</h2>
-<p>YTFilter stores two things locally in your browser:</p>
-<ul>
-  <li>
-    <strong>Your filter settings</strong> — saved to <code>chrome.storage.sync</code>. This includes your slider positions, keyword lists, whitelist, and toggle states. If you are signed into Chrome/Edge, this data syncs across your own devices via Google's or Microsoft's sync infrastructure. It is never sent to YTFilter.
-  </li>
-  <li>
-    <strong>Subscriber count cache</strong> — saved to <code>chrome.storage.local</code>. When the subscriber filter is active, the extension fetches the YouTube page for each unique channel you encounter and stores the subscriber count locally for 12 hours to avoid repeat requests. This cache stays on your device only.
-  </li>
-</ul>
+    <p>YTFilter is a browser extension that filters YouTube video cards based on criteria you configure. This policy explains exactly what data the extension accesses and where it goes.</p>
 
-<h2>Network requests</h2>
-<p>When the "Min subscribers" filter is enabled, YTFilter makes <code>fetch()</code> requests to <code>https://www.youtube.com/@channelname</code> (the channel's own public page) to read the subscriber count. These requests:</p>
-<ul>
-  <li>Go directly to YouTube — not through any YTFilter server</li>
-  <li>Include your browser's YouTube cookies (so YouTube sees these as normal page loads from your account)</li>
-  <li>Are limited to 2 concurrent requests at a time</li>
-  <li>Are cached for 12 hours so the same channel is not fetched repeatedly</li>
-</ul>
-<p>No other network requests are made by this extension. All other filtering (view count, date, duration, keywords, ALL CAPS detection) is done by reading text already present in the YouTube page's DOM — no requests needed.</p>
+    <h2>Data we collect</h2>
+    <p><strong>None.</strong> YTFilter does not collect, transmit, or sell any personal data. There is no backend server, no account system, and no analytics.</p>
 
-<h2>Permissions explained</h2>
-<ul>
-  <li><strong>storage</strong> — to save your filter settings and subscriber count cache locally</li>
-  <li><strong>activeTab</strong> — to send messages from the popup to the active YouTube tab when you change a filter</li>
-  <li><strong>tabs</strong> — to clear the toolbar badge count when you navigate away from YouTube</li>
-  <li><strong>host permission: youtube.com</strong> — to inject the filtering script into YouTube pages and to fetch channel pages for subscriber counts</li>
-</ul>
+    <h2>Data stored on your device</h2>
+    <p>YTFilter stores two things locally in your browser:</p>
+    <ul>
+      <li>
+        <strong>Your filter settings</strong> — saved to <code>chrome.storage.sync</code>. This includes your slider positions, keyword lists, whitelist, and toggle states. If you are signed into Chrome/Edge, this data syncs across your own devices via Google's or Microsoft's sync infrastructure. It is never sent to YTFilter.
+      </li>
+      <li>
+        <strong>Subscriber count cache</strong> — saved to <code>chrome.storage.local</code>. When the subscriber filter is active, the extension fetches the YouTube page for each unique channel you encounter and stores the subscriber count locally for 12 hours to avoid repeat requests. This cache stays on your device only.
+      </li>
+    </ul>
 
-<h2>Third parties</h2>
-<p>YTFilter shares no data with any third party. The only external service the extension communicates with is YouTube itself, which you are already using.</p>
+    <h2>Network requests</h2>
+    <p>When the "Min subscribers" filter is enabled, YTFilter makes <code>fetch()</code> requests to <code>https://www.youtube.com/@channelname</code> (the channel's own public page) to read the subscriber count. These requests:</p>
+    <ul>
+      <li>Go directly to YouTube — not through any YTFilter server</li>
+      <li>Include your browser's YouTube cookies (so YouTube sees these as normal page loads from your account)</li>
+      <li>Are limited to 2 concurrent requests at a time</li>
+      <li>Are cached for 12 hours so the same channel is not fetched repeatedly</li>
+    </ul>
+    <p>Separately, if you use the popup's "Report an issue" form, the message you type is sent directly to <code>https://unikdev.app/api/extension-report</code> so it reaches the developer — nothing else about your browser or activity is included in that request. Uninstalling the extension also opens a feedback page at <code>unikdev.app</code>; the extension name and version number are included in that page's URL so we know which version was uninstalled, but nothing further about you or your browser is sent unless you choose to fill out and submit that page's form.</p>
+    <p>No other network requests are made by this extension. All other filtering (view count, date, duration, keywords, ALL CAPS detection) is done by reading text already present in the YouTube page's DOM — no requests needed.</p>
 
-<h2>Children</h2>
-<p>YTFilter does not knowingly collect information from anyone. It collects no information at all.</p>
+    <h2>Permissions explained</h2>
+    <ul>
+      <li><strong>storage</strong> — to save your filter settings and subscriber count cache locally</li>
+      <li><strong>tabs</strong> — to send messages from the popup to the active YouTube tab when you change a filter, and to clear the toolbar badge count when you navigate away from YouTube</li>
+      <li><strong>host permission: youtube.com</strong> — to inject the filtering script into YouTube pages and to fetch channel pages for subscriber counts</li>
+      <li><strong>host permission: unikdev.app</strong> — used only if you submit the optional "Report an issue" form in the popup, so your message reaches the developer</li>
+    </ul>
 
-<h2>Changes to this policy</h2>
-<p>If the extension is updated in a way that changes data handling, this policy will be updated and the version date above will change.</p>
+    <h2>Third parties</h2>
+    <p>YTFilter shares no data with any third party. The only external services the extension communicates with are YouTube itself, which you are already using, and unikdev.app, which is only contacted if you choose to submit feedback.</p>
 
-<h2>Contact</h2>
-<p>Questions about this policy can be sent to <a href="mailto:unikdevelopment@gmail.com">unikdevelopment@gmail.com</a>.</p>
+    <h2>Children</h2>
+    <p>YTFilter does not knowingly collect information from anyone. It collects no information at all.</p>
 
-<hr>
-<p style="font-size:13px; color:#888;">YTFilter is developed by Unik Development and is not affiliated with YouTube or Google.</p>
+    <h2>Changes to this policy</h2>
+    <p>If the extension is updated in a way that changes data handling, this policy will be updated and the version date above will change.</p>
 
+    <h2>Contact</h2>
+    <p>Questions about this policy can be sent to <a href="mailto:unikdevelopment@gmail.com">unikdevelopment@gmail.com</a>.</p>
+
+    <hr>
+    <p class="footnote">YTFilter is developed by Unik Development and is not affiliated with YouTube or Google. See also the portfolio-wide <a href="https://unikdev.app/legal/terms" target="_blank" rel="noopener">Terms of Service</a>.</p>
+
+  </div>
+</div>
 </body>
 </html>
