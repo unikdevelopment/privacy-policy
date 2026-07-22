@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Task Starter — Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #142523;
+    --muted: #647a77;
+    --border: #dde8e6;
+    --accent: #0d9488;
+    --accent-dark: #115e59;
+    --card-bg: #f4faf9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12201e;
+      --fg: #eaf5f3;
+      --muted: #93aeaa;
+      --border: #2a3d3a;
+      --accent: #2dd4bf;
+      --accent-dark: #14b8a6;
+      --card-bg: #172926;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 28px 24px;
+    background: linear-gradient(135deg, #0d9488, #115e59);
+    color: #fff;
+  }
+  header svg { width: 36px; height: 36px; flex: 0 0 auto; }
+  header h1 { font-size: 20px; margin: 0; }
+  header p { margin: 2px 0 0; font-size: 13px; color: rgba(255,255,255,0.8); }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 32px 0 10px;
+    color: var(--accent-dark);
+  }
+  h2:first-of-type { margin-top: 0; }
+  p, li { font-size: 14.5px; color: var(--fg); }
+  ul { padding-left: 20px; }
+  .updated { font-size: 13px; color: var(--muted); margin-top: -4px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+  }
+  th { background: var(--card-bg); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  a { color: var(--accent-dark); }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 24px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 20.21 26.16 A 11 11 0 1 1 26.16 20.21" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="25.90,25.90 20.46,24.98 24.98,20.46" fill="#ffffff"/>
+    </svg>
+    <div>
+      <h1>Task Starter — Privacy Policy</h1>
+      <p>Beat the starting barrier</p>
+    </div>
+  </header>
+
+  <main>
+    <p class="updated">Last updated: July 22, 2026</p>
+
+    <div class="card">
+      <strong>The short version:</strong> Task Starter does not collect, transmit, or sell any of
+      your data. Your tasks, first steps, and reminder settings are stored only in your own
+      browser. If you never enter a Pro license key, the extension makes zero network requests.
+    </div>
+
+    <h2>What data is stored</h2>
+    <p>All of the following is stored locally in your browser via <code>chrome.storage.local</code>
+      and is never transmitted anywhere:</p>
+    <ul>
+      <li>Your task list: the text you typed, the generated first step, timestamps, your chosen
+        nudge timing, and whether each task is started or completed.</li>
+      <li>Reading Focus display preferences (font size, line spacing, bionic-text toggle) —
+        these never leave your device, and neither does any article content Reading Focus
+        processes, since the whole feature runs client-side in the current tab.</li>
+      <li>Your extension settings (Free/Pro state) and install date.</li>
+      <li>A random installation identifier generated on first install, used only to recognize
+        your own Pro license activation — it is not tied to your identity in any way.</li>
+      <li>If you activate a Pro license: the key itself and its last-checked validity state.</li>
+    </ul>
+
+    <h2>What data is collected</h2>
+    <p>None. Task Starter has no analytics, no telemetry, no crash reporting, and no third-party
+      tracking scripts of any kind.</p>
+
+    <h2>External servers &amp; third-party services</h2>
+    <table>
+      <tr><th>Service</th><th>When contacted</th><th>What's sent</th></tr>
+      <tr>
+        <td>api.lemonsqueezy.com</td>
+        <td>Only when you enter and activate a Pro license key in Options, and during an
+          automatic re-check roughly every 6 hours <em>if</em> a key is active</td>
+        <td>The license key you entered and the random installation identifier described above.
+          No task text, first steps, or reading activity are ever included. This request goes
+          directly to Lemon Squeezy, our payment provider.</td>
+      </tr>
+      <tr>
+        <td>unikdev.app/api/extension-report</td>
+        <td>Only if you type a message into the popup's "Report an issue" form and click Send</td>
+        <td>The message you wrote, and the extension name so the report can be routed correctly.
+          Nothing is sent automatically or silently.</td>
+      </tr>
+      <tr>
+        <td>unikdev.app/uninstall-feedback</td>
+        <td>Automatically opened by Chrome (not by Task Starter itself) the moment you uninstall
+          the extension</td>
+        <td>The extension name and version number, as URL query parameters — this is a normal
+          webpage Chrome navigates to, not a background network call.</td>
+      </tr>
+    </table>
+    <p>If you never activate a Pro key, submit a report, or uninstall, Task Starter makes
+      <strong>zero</strong> network requests.</p>
+
+    <h2>Permissions explained</h2>
+    <table>
+      <tr><th>Permission</th><th>Why it's needed</th></tr>
+      <tr><td><code>storage</code></td><td>Save your tasks, nudge settings, and license state locally.</td></tr>
+      <tr><td><code>alarms</code></td><td>Schedule each task's start reminder and the periodic Pro license re-check.</td></tr>
+      <tr><td><code>notifications</code></td><td>Show the "time to start" reminder with Snooze / I started buttons.</td></tr>
+      <tr><td><code>activeTab</code></td><td>Let Reading Focus read and restyle the article on your current tab, only after you click the toggle button.</td></tr>
+      <tr><td><code>scripting</code></td><td>Inject the Reading Focus overlay into the current tab on demand.</td></tr>
+      <tr><td><code>api.lemonsqueezy.com</code></td><td>Required for the license-validation request described above.</td></tr>
+      <tr><td><code>unikdev.app</code></td><td>Required for the optional issue-report request and the post-uninstall feedback page.</td></tr>
+    </table>
+
+    <h2>Data deletion</h2>
+    <p>Delete any individual task at any time with its trash icon in the popup, or remove the
+      extension entirely — Chrome automatically deletes all of its local storage the moment it's
+      uninstalled.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Task Starter is not directed at children and does not knowingly collect any data from
+      anyone, of any age — see "What data is collected" above.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the "Last updated" date above will change accordingly. Material
+      changes will also be noted in the extension's Chrome Web Store changelog.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or Task Starter's data practices:
+      <a href="mailto:support@unikdev.app">support@unikdev.app</a></p>
+  </main>
+
+  <footer>Task Starter — Beat the Starting Barrier</footer>
+</body>
+</html>
