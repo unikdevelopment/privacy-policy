@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Country Stats Card</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #f6f7f9;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #16171a; color: #e8eaed; }
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #4F46E5, #312E81);
+    color: #fff;
+    padding: 40px 20px 32px;
+  }
+  .hero-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; gap: 16px; }
+  .mark {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: linear-gradient(135deg, #4F46E5, #312E81);
+    border: 1px solid rgba(255,255,255,0.25);
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 18px;
+  }
+  .hero h1 { margin: 0 0 4px; font-size: 24px; }
+  .hero p { margin: 0; opacity: 0.9; font-size: 14px; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    .card { background: #202124; box-shadow: none; border: 1px solid rgba(255,255,255,0.08); }
+  }
+
+  h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #4338CA;
+    margin: 0 0 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    h2 { color: #A5B4FC; }
+  }
+
+  p, li { font-size: 14px; }
+  ul { margin: 8px 0; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+
+  .badge-none {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1E8E3E;
+    background: rgba(30, 142, 62, 0.12);
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-left: 6px;
+  }
+  @media (prefers-color-scheme: dark) {
+    .badge-none { color: #81C995; background: rgba(129, 201, 149, 0.14); }
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid rgba(0,0,0,0.08); vertical-align: top; }
+  @media (prefers-color-scheme: dark) {
+    th, td { border-color: rgba(255,255,255,0.1); }
+  }
+  th { font-weight: 600; opacity: 0.7; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.03em; }
+
+  a { color: #4338CA; }
+  @media (prefers-color-scheme: dark) {
+    a { color: #A5B4FC; }
+  }
+
+  .muted { opacity: 0.65; font-size: 12.5px; }
+  .updated { text-align: center; margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="mark">CS</div>
+    <div>
+      <h1>Privacy Policy</h1>
+      <p>Country Stats Card — Compare Countries Instantly</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="card">
+    <h2>Summary</h2>
+    <p>
+      Country Stats Card's free tier makes <strong>zero network requests</strong>.
+      Every free-tier fact (capital, population, area, region, language, currency,
+      flag) ships bundled inside the extension and is matched against your search
+      query entirely on your own device — nothing about what you search is ever
+      sent anywhere. The paragraphs below explain exactly what does leave your
+      browser once you activate the optional Pro tier, and why.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>What we don't collect</h2>
+    <ul>
+      <li>No browsing history</li>
+      <li>No search queries sent to any server</li>
+      <li>No analytics or tracking scripts</li>
+      <li>No ads, no ad-network SDKs</li>
+      <li>No account, email, or sign-up required to use the free tier</li>
+      <li>No data sold or shared with third parties for advertising</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Local storage on your device</h2>
+    <p>
+      The extension uses <code>chrome.storage.local</code> to remember, only on
+      your own device:
+    </p>
+    <table>
+      <tr><th>What</th><th>Why</th></tr>
+      <tr><td>Per-search-engine toggle state (Google / DuckDuckGo on or off)</td><td>Remembers your preference between browser sessions.</td></tr>
+      <tr><td>Pro license key and cached validity state</td><td>Lets Pro features stay unlocked without re-checking on every page load.</td></tr>
+      <tr><td>A randomly generated installation identifier</td><td>Required by Lemon Squeezy's license system to tell one install of the extension apart from another activation of the same key — it is not linked to your name, email, or browsing activity.</td></tr>
+    </table>
+    <p class="muted">None of this local data is transmitted anywhere except as described below.</p>
+  </div>
+
+  <div class="card">
+    <h2>Network requests this extension makes</h2>
+    <table>
+      <tr><th>Destination</th><th>When</th><th>What is sent</th></tr>
+      <tr>
+        <td><code>api.worldbank.org</code></td>
+        <td>Pro only — when you open a live trend chart or the full report page</td>
+        <td>The country code(s) and indicator being requested. No personal data, no identifiers.</td>
+      </tr>
+      <tr>
+        <td><code>api.lemonsqueezy.com</code></td>
+        <td>When you activate a Pro license key, and roughly twice a day afterward to re-confirm it's still valid</td>
+        <td>The license key you entered and the random installation identifier above.</td>
+      </tr>
+      <tr>
+        <td><code>unikdev.app</code></td>
+        <td>Only if you use the optional "Report an issue" form, or after you uninstall the extension</td>
+        <td>The report form sends the message you typed. The post-uninstall page is opened as a normal browser tab (an optional feedback survey) — no data about you is sent to trigger it.</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Bundled data &amp; third-party sources</h2>
+    <p>
+      Country facts are derived from
+      <a href="https://github.com/mledoze/countries" target="_blank" rel="noopener">mledoze/countries</a>
+      (ODbL 1.0) and the
+      <a href="https://data.worldbank.org/" target="_blank" rel="noopener">World Bank Open Data</a>
+      API (CC BY 4.0). Flag icons are from
+      <a href="https://github.com/lipis/flag-icons" target="_blank" rel="noopener">flag-icons</a>
+      (MIT). Country map illustrations are from mapsicon by Damien Jaisson. Full
+      attribution is included in the extension's options page footer.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Children's privacy</h2>
+    <p>
+      Country Stats Card is a general-audience reference tool and does not
+      knowingly collect information from anyone, including children.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Changes to this policy</h2>
+    <p>
+      If this policy changes, the "Last updated" date below will change and, for
+      any material change, we'll note it in the extension's Chrome Web Store
+      listing changelog.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Trademarks</h2>
+    <p>
+      Country Stats Card is an independent extension and isn't affiliated with,
+      endorsed by, or sponsored by Google LLC or DuckDuckGo Inc. "Google" and
+      "DuckDuckGo" are trademarks of their respective owners, referenced here
+      only to describe where the extension's search-detection feature works.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy or your data can be sent via the "Report an
+      issue" form in the extension's popup, or through
+      <a href="https://unikdev.app" target="_blank" rel="noopener">unikdev.app</a>.
+    </p>
+  </div>
+
+  <p class="updated muted">Last updated: July 24, 2026</p>
+
+</div>
+</body>
+</html>
